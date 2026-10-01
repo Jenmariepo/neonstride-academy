@@ -76,7 +76,7 @@ Las rutas abreviadas de frontend parten de `frontend/src/js/`; las del servidor 
 
 ## Limitaciones explícitas
 
-El navegador real no pudo iniciarse: el proceso devolvió `spawn EPERM` y un intento de lanzamiento adicional fue rechazado por la política de permisos de la sesión. Las pruebas JSDOM cubren integración y comportamiento, no composición visual ni audio perceptual. `tests/browser-check.js` contiene la prueba con Chrome y captura de pantallas, pendiente de ejecutar fuera de esta restricción.
+La revisión en navegador real sigue pendiente. Las pruebas JSDOM cubren integración y comportamiento, no composición visual ni audio perceptual. `tests/browser-check.js` contiene la prueba con Chrome y captura de pantallas que debe ejecutarse para completar esa evidencia.
 
 El servidor no reejecuta las entradas de una partida, por lo que la validación de puntuación no constituye un sistema antitrampas completo. El TOP 5 sí excluye práctica y requiere el token del perfil para registrar sus resultados. Los tokens no implementan recuperación de cuentas entre dispositivos. Estas decisiones se explican en README.
 
@@ -84,7 +84,6 @@ El servidor no reejecuta las entradas de una partida, por lo que la validación 
 
 | Acción                              | Evidencia necesaria                                                    |
 | ----------------------------------- | ---------------------------------------------------------------------- |
-| Publicar repositorio remoto         | URL verificable del repositorio.                                       |
 | Trabajo y commits de ambos          | Cambios y commits propios, no atribuciones ficticias.                  |
 | Validación visual, audio y capturas | Escritorio, tablet y móvil; ejecutar `npm run test:browser` y revisar. |
 | Desplegar                           | URL frontend/API y prueba de persistencia tras reinicio.               |
@@ -97,8 +96,9 @@ La aplicación es demostrable localmente con los comandos del README. Eso no equ
 
 - Git local inicializado en `main`; `.git` se excluye del ZIP.
 - `technical-document.pdf` creado, con cuatro páginas y revisión visual completa; datos académicos completos.
-- `presentation-script.md`: guion de siete minutos y preguntas con respuestas para ensayar.
-- `delivery-guide.md`: pasos concretos para capturas, Git, despliegue y grabación.
-- Nuevo intento de navegador: Chrome devuelve `spawn EPERM`; las herramientas de control de navegador y Windows fallan al escribir los recursos del kernel. No se generaron capturas ni se certifica la revisión visual del juego.
 
 El documento PDF sí se renderizó correctamente con Poppler. Esta revisión no equivale a revisar la interfaz del videojuego.
+
+## Organización de la entrega
+
+El repositorio remoto está publicado. El documento técnico en Word se encuentra en `technical-document.docx`; su paginación visual está pendiente de comprobación. Los guiones y las instrucciones personales se han separado del repositorio. La distribución académica permanece en `team-work.md`.

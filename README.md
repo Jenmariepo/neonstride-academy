@@ -190,7 +190,7 @@ npm run build
 
 `npm test` ejecuta sin subprocesos aislados para admitir este entorno. Los valores numéricos esperados de las pruebas no se consideran constantes de negocio.
 
-Para verificación visual, con el servidor activo y Chrome instalado: `npm run test:browser`. Acepta `TEST_URL` para otro puerto y `CDP_URL` para un Chrome de pruebas ya iniciado. Genera capturas en `docs/screenshots/`. **La ejecución de Chrome quedó bloqueada por permisos en el entorno de entrega; no se declara verificada la apariencia en dispositivos reales.**
+Para verificación visual, con el servidor activo y Chrome instalado: `npm run test:browser`. Acepta `TEST_URL` para otro puerto y `CDP_URL` para un Chrome de pruebas ya iniciado. Genera capturas en `docs/screenshots/`. **La apariencia y el audio en dispositivos reales siguen pendientes de verificación.**
 
 ## Capturas de pantalla
 
@@ -220,10 +220,8 @@ No se migra automáticamente el `localStorage` antiguo al leaderboard global: im
 - [Documento técnico en Word](docs/technical-document.docx).
 - [Documento técnico PDF de cuatro páginas](docs/technical-document.pdf).
 - [Fuente editable y diagramas Mermaid](docs/technical-document.md).
-- [Guía para cerrar la entrega](docs/delivery-guide.md).
-- [Guion del video y defensa](docs/presentation-script.md).
 - [Auditoría requisito por requisito](docs/final-audit.md).
 - [CHECKLIST académico](CHECKLIST.md).
-- [Trabajo real de dos integrantes y guion de defensa](docs/team-work.md).
+- [Organización del trabajo académico](docs/team-work.md).
 
-**Autores:** `Diego Heredia` y `Jenmarie Polanco`. Completar repositorio, aportaciones y evidencias antes de entregar.
+**Autores:** `Diego Heredia` y `Jenmarie Polanco`. Completar aportaciones individuales y evidencias antes de entregar.

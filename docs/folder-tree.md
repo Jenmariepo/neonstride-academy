@@ -39,13 +39,12 @@ neonstride/
 │   ├── screenshots/
 │   │   └── README.md
 │   ├── code-audit.json
-│   ├── delivery-guide.md
 │   ├── deployment.md
 │   ├── final-audit.md
 │   ├── folder-tree.md
 │   ├── initial-analysis.md
-│   ├── presentation-script.md
 │   ├── team-work.md
+│   ├── technical-document.docx
 │   ├── technical-document.md
 │   ├── technical-document.pdf
 │   └── test-results.txt

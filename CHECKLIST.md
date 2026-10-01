@@ -3,7 +3,7 @@
 Las casillas sin marcar son **⚠️ PENDIENTE DE ACCIÓN HUMANA**. Las marcadas tienen evidencia en [la auditoría](docs/final-audit.md). No confundir implementación responsiva con revisión visual real.
 
 - [x] Repositorio Git local inicializado en main (carpeta de trabajo).
-- [ ] Repositorio remoto publicado.
+- [x] Repositorio remoto publicado: https://github.com/Jenmariepo/neonstride-academy.
 - [ ] Commits propios de ambos integrantes.
 - [x] README profesional.
 - [x] .gitignore.
@@ -35,7 +35,8 @@ Las casillas sin marcar son **⚠️ PENDIENTE DE ACCIÓN HUMANA**. Las marcadas
 - [ ] Aplicación publicada en URL pública.
 - [x] Contenido de documento técnico de cuatro páginas.
 - [x] PDF técnico de cuatro páginas renderizado y revisado visualmente.
-- [x] Guion de siete minutos y respuestas para ensayar la defensa.
+- [x] Guion de siete minutos preparado como material personal fuera del repositorio.
+- [x] Documento técnico en Word; revisión de paginación en Word pendiente.
 - [ ] Video de 5–8 minutos grabado.
 - [ ] Ambos integrantes pueden explicar todo el código.
 - [x] Nombres, asignatura, docente, institución y autores completados.
