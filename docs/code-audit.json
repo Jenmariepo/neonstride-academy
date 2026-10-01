@@ -1,0 +1,14 @@
+{
+  "fileCount": 77,
+  "functionCount": 356,
+  "longestFile": {
+    "path": "frontend\\src\\css\\layout.css",
+    "lines": 270
+  },
+  "longestFunction": {
+    "path": "frontend\\src\\js\\ui\\actions.js",
+    "line": 3,
+    "lines": 34
+  },
+  "errors": []
+}

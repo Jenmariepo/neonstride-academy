@@ -1,0 +1,13 @@
+node_modules/
+.env
+dist/
+*.log
+*.sqlite*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+coverage/
+test-results/
+playwright-report/

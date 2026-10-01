@@ -1,0 +1,249 @@
+.game-heading {
+  margin-bottom: 24px;
+}
+.game-heading h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+}
+.hud {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.hud > div {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 15px;
+}
+.hud small {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.hud b {
+  display: block;
+  font-size: 23px;
+  margin-top: 6px;
+}
+#hud-lives {
+  color: var(--pink);
+}
+.game-layout {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr) 225px;
+  gap: 22px;
+  align-items: start;
+}
+.game-sidebar,
+.race-panel {
+  padding: 23px;
+}
+.game-sidebar h3 {
+  overflow-wrap: anywhere;
+}
+.game-sidebar p {
+  font-size: 12px;
+  text-align: center;
+}
+.target-orb {
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 110px;
+  margin: 22px auto;
+  border-radius: 26px;
+  color: var(--accent);
+  font-size: 70px;
+  background: radial-gradient(circle, #a492ff22, #68e9fa05);
+  border: 1px solid var(--line);
+}
+.shortcut {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 15px;
+}
+kbd {
+  display: inline-grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 9px;
+  background: #ffffff0b;
+  border-radius: 6px;
+  color: #ddd;
+}
+.race-panel label {
+  display: block;
+  font-size: 10px;
+  margin: 24px 0 12px;
+}
+.race-panel p {
+  font-size: 11px;
+}
+.race-panel .back {
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+.board-area {
+  min-width: 0;
+  position: relative;
+}
+.timer-line {
+  display: grid;
+  grid-template-columns: 62px 1fr 65px;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.timer-line b {
+  font-size: 24px;
+}
+.hint-button {
+  padding: 9px;
+  color: #ffdf8b;
+}
+.board {
+  display: grid;
+  gap: 8px;
+  background: #0c0c21;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 12px;
+  width: min(100%, 490px);
+  margin: auto;
+}
+.size-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.size-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.size-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.size-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.size-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.size-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.cell {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  aspect-ratio: 1;
+  border: 1px solid #ffffff0b;
+  border-radius: 10px;
+  padding: 0;
+  color: #f4f2ff;
+  background: linear-gradient(145deg, #22203f, #17172e);
+  font-family: 'Consolas', 'Segoe UI Emoji', monospace;
+  font-size: clamp(21px, 3vw, 39px);
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.cell:disabled,
+.answer:disabled {
+  opacity: 1;
+}
+.cell:hover:enabled {
+  border-color: var(--accent);
+  background: #302f51;
+}
+.size-7 .cell,
+.size-8 .cell {
+  font-size: clamp(19px, 2.1vw, 28px);
+}
+.correct {
+  border-color: #8eecaf !important;
+  background: #8eecaf24 !important;
+}
+.wrong {
+  border-color: #ff83a8 !important;
+  background: #ff83a824 !important;
+  animation: shake 0.25s;
+}
+.hint {
+  border-color: #ffe097;
+  box-shadow: 0 0 16px #ffe09744;
+  animation: hint-pulse 0.6s infinite alternate;
+}
+#game-feedback {
+  min-height: 2em;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 18px;
+}
+#level-banner {
+  opacity: 0;
+  text-align: center;
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 800;
+}
+#level-banner.visible {
+  opacity: 1;
+  animation: level-up 0.6s;
+}
+#confetti {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  z-index: 15;
+}
+.confetti-piece {
+  color: var(--accent);
+  font-size: 18px;
+  animation: confetti-fall 1.4s ease-in forwards;
+}
+.confetti-piece:nth-child(2n) {
+  color: var(--pink);
+  animation-duration: 1.1s;
+}
+.confetti-piece:nth-child(3n) {
+  color: var(--violet);
+  animation-duration: 1.3s;
+}
+@keyframes confetti-fall {
+  from {
+    transform: translateY(-30px) rotate(0);
+  }
+  to {
+    transform: translateY(105vh) rotate(270deg);
+    opacity: 0;
+  }
+}
+@keyframes hint-pulse {
+  to {
+    background: #ffe09733;
+  }
+}
+@keyframes shake {
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+@keyframes level-up {
+  from {
+    transform: translateY(10px) scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

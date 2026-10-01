@@ -1,0 +1,69 @@
+
+> neonstride-academy@1.0.0 check
+> npm run lint && npm run audit:code && npm test
+
+
+> neonstride-academy@1.0.0 lint
+> eslint .
+
+
+> neonstride-academy@1.0.0 audit:code
+> node scripts/audit-code.js
+
+{
+  "fileCount": 77,
+  "functionCount": 356,
+  "longestFile": {
+    "path": "frontend\\src\\css\\layout.css",
+    "lines": 270
+  },
+  "longestFunction": {
+    "path": "frontend\\src\\js\\ui\\actions.js",
+    "line": 3,
+    "lines": 34
+  },
+  "errors": []
+}
+
+> neonstride-academy@1.0.0 test
+> node --test --test-isolation=none tests/*.test.js
+
+✔ player creation validates names and never exposes credential hash (555.755ms)
+✔ profile update requires ownership token (20.8519ms)
+✔ game validates score, modes, counts and credentials (37.4236ms)
+✔ game persistence is idempotent and server computes accuracy (17.1464ms)
+✔ practice does not affect leaderboard, counts or achievements (25.5193ms)
+✔ SQL-like input is rejected without damage; invalid IDs and missing routes are safe (20.2883ms)
+✔ CORS is explicit and malformed JSON gets a normalized error (14.0791ms)
+✔ a second database connection reads persisted games (6.0415ms)
+✔ array enums, forged victory and malformed submission IDs are rejected (19.8323ms)
+✔ internal errors are not exposed to clients (13.2502ms)
+✔ every level increases PRISM pressure even after time and grid reach their limits (2.4326ms)
+✔ harder difficulty gives PRISM more speed and less retreat at the same level (1.8389ms)
+✔ the same one-second response concedes more ground at level ten than level one (1.7007ms)
+✔ educational recovery preserves the current level pressure (1.8871ms)
+✔ every mode produces exactly one different element at every grid size (1.4605ms)
+✔ difficulty respects initial times, growing grids and maximum size (0.3948ms)
+✔ hits increase score, streak, level and progress; repeated input is locked (0.6257ms)
+✔ wrong selection and timeout reveal answer and apply distinct penalties (0.4787ms)
+✔ pause freezes rounds, hint duration, feedback and quiz (0.4174ms)
+✔ hints are temporary, penalized, limited and cannot stack (0.2943ms)
+✔ practice has no clock, rival, life loss or competitive points (0.3584ms)
+✔ PRISM reaching finish enters recovery; success restores race (0.302ms)
+✔ losing all lives enters recovery; two failed questions end game (0.3822ms)
+✔ 34 hits win and ended game never advances again (0.6243ms)
+✔ all educational questions have exactly four choices and valid answers (0.2414ms)
+✔ achievements use best streak even if last answer failed (0.463ms)
+✔ UI requires and validates a profile, saves avatar and displays server profile (51.2794ms)
+✔ UI practice board, hint shortcut and typing suppression work (100.9384ms)
+✔ UI pause, recovery dialogs, real result submission and records are connected (238.7191ms)
+✔ UI retries a failed HTTP save exactly once (67.0966ms)
+✔ UI settings persist and profile editing pauses active game (82.3001ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4915.7596

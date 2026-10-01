@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09091c" />
+    <meta name="api-base" content="" />
+    <meta name="description" content="Encuentra el diferente. Supera a PRISM. Un juego de percepción y velocidad." />
+    <title>¿DÓNDE ESTÁ? × NEONSTRIDE</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="src/css/base.css" />
+    <link rel="stylesheet" href="src/css/layout.css" />
+    <link rel="stylesheet" href="src/css/components.css" />
+    <link rel="stylesheet" href="src/css/game.css" />
+    <link rel="stylesheet" href="src/css/responsive.css" />
+    <script type="module" src="src/js/main.js"></script>
+  </head>
+  <body data-theme="blue">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="app">
+      <header class="header">
+        <a class="brand" href="./" aria-label="NEONSTRIDE, inicio"
+          ><span class="brand-icon">⌕</span><span><strong>¿DÓNDE ESTÁ?</strong><small>NEONSTRIDE ACADEMY</small></span></a
+        >
+        <div class="header-actions">
+          <span class="edition">PERCEPCIÓN × VELOCIDAD</span>
+          <button id="sound-button" data-action="sound" class="icon-button" aria-label="Cambiar sonido">🔊</button>
+          <button data-action="theme" class="icon-button" aria-label="Cambiar tema">🎨</button>
+          <button id="profile-button" data-action="profile" class="icon-button" aria-label="Editar perfil">🧑‍🚀</button>
+        </div>
+      </header>
+      <main>
+        <section id="menu" data-screen="menu">
+          <div class="eyebrow">
+            <span class="status-dot"></span> SISTEMA LISTO
+            <span class="muted">/ ENTRENAMIENTO VISUAL 01</span>
+          </div>
+          <div class="hero panel">
+            <div class="hero-copy">
+              <span class="tag">UN DETALLE LO CAMBIA TODO</span>
+              <h2 tabindex="-1">Mira rápido.<br />Piensa <em>diferente.</em></h2>
+              <p id="greeting" class="greeting">¿Tienes buena vista?</p>
+              <p class="hero-description">Encuentra el único elemento diferente y cruza la meta antes que PRISM. Tu mirada es tu mejor ventaja.</p>
+              <div class="actions">
+                <button class="primary" data-action="play">JUGAR <span>↗</span></button><button class="secondary" data-action="practice">◎ PRÁCTICA</button>
+              </div>
+              <div class="hero-caption"><span class="status-dot"></span> 3 modos · 4 dificultades · una sola respuesta</div>
+            </div>
+            <div class="preview panel" aria-label="Ejemplo visual: una Q entre letras O">
+              <div class="preview-heading"><span>DETECTOR VISUAL</span><span class="accent">● EN LÍNEA</span></div>
+              <div class="preview-grid" aria-hidden="true"><span>O</span><span>O</span><span>O</span><span>O</span><span>Q</span><span>O</span><span>O</span><span>O</span><span>O</span></div>
+              <div class="preview-caption">¿Lo viste? <b>Confía en tus ojos.</b></div>
+              <div class="preview-race">
+                <label for="preview-player">TÚ <span>VENTAJA VISUAL</span></label
+                ><progress id="preview-player" max="100" value="68"></progress><label for="preview-prism">PRISM <span>RIVAL VIRTUAL</span></label
+                ><progress id="preview-prism" class="prism" max="100" value="47"></progress>
+              </div>
+            </div>
+          </div>
+          <div class="menu-cards">
+            <button class="panel menu-card" data-action="records">
+              <span class="card-icon">🏆</span><strong>RÉCORDS</strong><small>Tu lugar entre los mejores</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="panel menu-card" data-action="achievements">
+              <span class="card-icon">🏅</span><strong>LOGROS</strong><small id="menu-achievements">14 desafíos para ti</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="panel menu-card" data-action="settings">
+              <span class="card-icon">⚙️</span><strong>CONFIGURACIÓN</strong><small>Tu juego, a tu manera</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="panel menu-card" data-action="help">
+              <span class="card-icon">⌘</span><strong>CÓMO JUGAR</strong><small>Todo empieza con un vistazo</small><span class="card-arrow">↗</span>
+            </button>
+          </div>
+          <div class="menu-footer">
+            <span id="menu-profile">Crea tu piloto</span><span>MEJOR PUNTUACIÓN <b id="menu-best">—</b></span
+            ><span>MEJOR RACHA <b id="menu-streak">—</b></span>
+          </div>
+          <div id="pending-notice" class="notice" hidden>
+            Hay una partida pendiente de guardar.
+            <button data-action="retry-save">Reintentar envío</button>
+          </div>
+        </section>
+        <section id="selection" data-screen="selection" hidden>
+          <button class="back" data-action="menu">← Menú</button><span class="tag">CONFIGURACIÓN DE MISIÓN</span>
+          <h2 id="selection-title" tabindex="-1">Prepara tu misión</h2>
+          <div class="selection-grid">
+            <label class="panel selection-card"
+              >01 / MODO<select id="mode"></select
+              ><span class="muted">Letras y símbolos, emojis o una mezcla de ambos.</span></label
+            ><label class="panel selection-card"
+              >02 / DIFICULTAD<select id="difficulty"></select
+              ><span class="muted">El tablero, el tiempo y PRISM se adaptan a tu desafío.</span></label
+            >
+          </div>
+          <p id="selection-note" class="notice"></p>
+          <button class="primary" data-action="start">EMPEZAR MISIÓN ↗</button>
+        </section>
+        <section id="game" data-screen="game" hidden>
+          <div class="game-heading">
+            <div>
+              <span class="tag" id="game-mode"></span>
+              <h2 id="board-instruction" tabindex="-1">Encuentra el diferente</h2>
+            </div>
+            <button class="secondary" data-action="pause">Ⅱ PAUSA</button>
+          </div>
+          <div class="hud">
+            <div><small>PUNTOS</small><b id="hud-score">0</b></div>
+            <div><small>VIDAS</small><b id="hud-lives">♥♥♥</b></div>
+            <div><small>RACHA</small><b id="hud-streak">0</b></div>
+            <div><small>NIVEL</small><b id="hud-level">1</b></div>
+            <div><small>PRECISIÓN</small><b id="hud-accuracy">0%</b></div>
+            <div><small>RONDA</small><b id="hud-round">1</b></div>
+          </div>
+          <div class="game-layout">
+            <aside class="panel game-sidebar">
+              <span class="tag">TU PILOTO</span>
+              <h3 id="game-profile"></h3>
+              <div class="target-orb">?</div>
+              <p class="muted">Una cuadrícula.<br />Un intruso.<br />Tu siguiente acierto.</p>
+              <div class="shortcut"><kbd>H</kbd> Pista</div>
+              <div class="shortcut"><kbd>P</kbd> Pausa</div>
+              <div class="shortcut"><kbd>M</kbd> Sonido</div>
+            </aside>
+            <div class="board-area">
+              <div class="timer-line">
+                <span>⏱ <b id="hud-time">20</b></span
+                ><progress id="timer-progress" max="100" value="100" aria-label="Tiempo restante"></progress
+                ><button id="hint-button" class="hint-button" data-action="hint">💡 <span id="hint-count">3</span></button>
+              </div>
+              <div id="board" class="board"></div>
+              <p id="game-feedback" role="status">Solo uno no coincide con los demás.</p>
+              <div id="level-banner" aria-live="polite"></div>
+            </div>
+            <aside class="panel race-panel">
+              <span class="tag">CARRERA EN VIVO</span>
+              <h3>La meta te espera.</h3>
+              <label for="player-progress">🧑‍🚀 JUGADOR</label><progress id="player-progress" max="100" value="0"></progress><label for="prism-progress">🤖 PRISM</label
+              ><progress id="prism-progress" class="prism" max="100" value="0"></progress>
+              <p id="prism-status" class="notice">PRISM DETRÁS</p>
+              <p class="muted">Acertar te acerca a la meta y frena a tu rival.</p>
+              <button data-action="finish" class="back">Terminar partida →</button>
+            </aside>
+          </div>
+        </section>
+        <section id="result" data-screen="result" hidden>
+          <div class="result-card panel">
+            <span class="tag">INFORME DE MISIÓN</span>
+            <h2 id="result-title" tabindex="-1"></h2>
+            <p id="result-profile"></p>
+            <div id="result-score" class="final-score">0</div>
+            <span class="muted">PUNTOS</span>
+            <div id="result-metrics" class="metrics"></div>
+            <p id="save-status" role="status"></p>
+            <button id="retry-save" data-action="retry-save" class="secondary" hidden>Reintentar guardado</button>
+            <div class="actions">
+              <button data-action="play" class="primary">OTRA MISIÓN ↗</button><button data-action="menu" class="secondary">MENÚ</button><button data-action="copy" class="secondary">COPIAR</button>
+            </div>
+          </div>
+        </section>
+        <section id="records" data-screen="records" hidden>
+          <button class="back" data-action="menu">← Menú</button><span class="tag">TU HISTORIAL</span>
+          <h2 tabindex="-1">Cada marca cuenta.</h2>
+          <div id="records-metrics" class="metrics"></div>
+          <div class="panel leaderboard-panel">
+            <div class="section-heading">
+              <h3>🏆 TOP 5 GLOBAL</h3>
+              <div class="filters">
+                <label>Modo<select id="filter-mode" data-filter="mode"></select></label><label>Dificultad<select id="filter-difficulty" data-filter="difficulty"></select></label>
+              </div>
+            </div>
+            <p id="records-status" role="status"></p>
+            <ol id="leaderboard"></ol>
+          </div>
+        </section>
+        <section id="achievements" data-screen="achievements" hidden>
+          <button class="back" data-action="menu">← Menú</button><span class="tag">TU COLECCIÓN</span>
+          <h2 tabindex="-1">Pequeños grandes logros.</h2>
+          <p id="achievement-status" role="status"></p>
+          <div id="achievement-list" class="cards-grid"></div>
+        </section>
+        <section id="settings" data-screen="settings" hidden>
+          <button class="back" data-action="menu">← Menú</button><span class="tag">HAZLO TUYO</span>
+          <h2 tabindex="-1">Tu frecuencia.</h2>
+          <div class="panel settings-panel">
+            <div class="setting-row"><span>Nombre y avatar</span><button class="secondary" data-action="profile">Editar perfil</button></div>
+            <label class="setting-row">Tema<select id="theme" data-setting="theme"></select></label><label class="setting-row">Sonidos<input id="sound" type="checkbox" data-setting="sound" /></label
+            ><label class="setting-row">Animaciones<input id="animations" type="checkbox" data-setting="animations" /></label
+            ><label class="setting-row">Confeti<input id="confetti" type="checkbox" data-setting="confetti" /></label><button class="back" data-action="reset">Restablecer configuración</button>
+          </div>
+        </section>
+        <section id="help" data-screen="help" hidden>
+          <button class="back" data-action="menu">← Menú</button><span class="tag">MANUAL DEL PILOTO</span>
+          <h2 tabindex="-1">Aprende. Observa. Supera.</h2>
+          <div id="help-cards" class="cards-grid"></div>
+        </section>
+      </main>
+      <footer class="footer">
+        <span>NEONSTRIDE <b>ACADEMY</b></span
+        ><span>ENTRENA TU MIRADA. SUPERA TU MARCA.</span><span>01 / VISUAL RACE</span>
+      </footer>
+    </div>
+    <dialog id="profile-dialog" aria-labelledby="profile-title">
+      <form>
+        <span class="tag">IDENTIFICACIÓN DEL PILOTO</span>
+        <h2 id="profile-title">Tu próxima misión<br />empieza contigo.</h2>
+        <label for="profile-name">Nombre del piloto</label><input id="profile-name" name="name" minlength="2" maxlength="20" required autocomplete="nickname" placeholder="Escribe tu nombre" />
+        <p class="muted">De 2 a 20 caracteres. Elige también tu avatar.</p>
+        <div id="avatars" class="avatars"></div>
+        <p id="profile-error" role="alert"></p>
+        <div class="actions">
+          <button id="save-profile" class="primary" type="submit">GUARDAR PILOTO ↗</button><button id="cancel-profile" data-action="cancel-profile" class="secondary" type="button">Cancelar</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="pause-dialog" aria-labelledby="pause-title">
+      <span class="tag">TOMA UN RESPIRO</span>
+      <h2 id="pause-title">Misión en pausa.</h2>
+      <p class="muted">Tu tiempo, la carrera y las preguntas están detenidos.</p>
+      <div class="actions"><button class="primary" data-action="pause">CONTINUAR ↗</button><button class="secondary" data-action="finish">TERMINAR</button></div>
+    </dialog>
+    <dialog id="quiz-dialog" aria-labelledby="quiz-question">
+      <div class="section-heading"><span id="quiz-category" class="tag"></span><strong id="quiz-time" class="quiz-clock">12</strong></div>
+      <p class="pink">DESAFÍO DE RECUPERACIÓN</p>
+      <h2 id="quiz-question"></h2>
+      <p id="quiz-attempt" class="muted"></p>
+      <div id="quiz-options" class="quiz-options"></div>
+      <p id="quiz-feedback" role="status"></p>
+      <button data-action="pause" class="back">Ⅱ Pausar pregunta</button>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <div id="confetti" aria-hidden="true"></div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+@media (max-width: 1000px) {
+  .app {
+    padding: 22px;
+  }
+  .hero {
+    padding: 32px;
+    gap: 24px;
+  }
+  .edition {
+    display: none;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 220px;
+  }
+  .game-sidebar {
+    display: none;
+  }
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-card {
+    padding: 18px;
+  }
+  .menu-card strong {
+    font-size: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .app {
+    padding: 18px 14px;
+  }
+  .header {
+    gap: 8px;
+  }
+  .brand strong {
+    font-size: 13px;
+  }
+  .brand small {
+    font-size: 7px;
+  }
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 32px;
+    border-radius: 10px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .header-actions {
+    gap: 5px;
+  }
+  .icon-button {
+    width: 33px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+  .hero h2 {
+    font-size: clamp(40px, 9vw, 60px);
+  }
+  .preview {
+    max-width: 380px;
+    width: 100%;
+    margin: 8px auto;
+    transform: none;
+  }
+  .menu-cards,
+  .selection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-card {
+    min-height: 140px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+  }
+  .menu-footer {
+    gap: 14px;
+  }
+  .menu-footer > :first-child {
+    width: 100%;
+  }
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+  .race-panel {
+    padding: 18px;
+  }
+  .race-panel .tag,
+  .race-panel h3,
+  .race-panel > .muted {
+    display: none;
+  }
+  .race-panel label {
+    margin-top: 12px;
+  }
+  .race-panel .notice {
+    margin: 15px 0 0;
+  }
+  .race-panel .back {
+    margin-top: 15px;
+  }
+  .hud {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .hud > div {
+    padding: 10px;
+  }
+  .hud b {
+    font-size: 19px;
+  }
+  .game-heading h2 {
+    font-size: 22px;
+  }
+  .board {
+    gap: 5px;
+    padding: 8px;
+  }
+  .size-8 .cell {
+    border-radius: 6px;
+  }
+  .cell {
+    font-size: clamp(22px, 6vw, 36px);
+  }
+  .size-7 .cell,
+  .size-8 .cell {
+    font-size: 22px;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .filters {
+    flex-wrap: wrap;
+  }
+  .leaderboard-panel {
+    padding: 18px;
+  }
+  .footer > :last-child {
+    display: none;
+  }
+  .footer {
+    font-size: 7px;
+  }
+  .result-card {
+    padding: 25px 18px;
+  }
+}
+@media (max-width: 420px) {
+  .selection-grid,
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero .actions {
+    gap: 8px;
+  }
+  .primary {
+    min-width: 135px;
+  }
+  .primary,
+  .secondary {
+    padding: 13px 15px;
+  }
+  .avatars {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  dialog {
+    padding: 24px;
+  }
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+  .size-8 .cell {
+    font-size: 19px;
+  }
+  .menu-card small {
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,68 @@
+# Autoevaluación académica
+
+Las casillas sin marcar son **⚠️ PENDIENTE DE ACCIÓN HUMANA**. Las marcadas tienen evidencia en [la auditoría](docs/final-audit.md). No confundir implementación responsiva con revisión visual real.
+
+- [x] Repositorio Git local inicializado en main (carpeta de trabajo).
+- [ ] Repositorio remoto publicado.
+- [ ] Commits propios de ambos integrantes.
+- [x] README profesional.
+- [x] .gitignore.
+- [x] .env.example sin secretos.
+- [x] Módulos ES6 import/export.
+- [x] Frontend modular con todas las carpetas pedidas.
+- [x] engine/core sin DOM.
+- [x] entities: Player y Prism.
+- [x] states/scenes separados.
+- [x] input independiente y addEventListener.
+- [x] backend por capas.
+- [x] API REST con todas las respuestas normalizadas.
+- [x] Validación frontend y backend.
+- [x] Manejo global de errores.
+- [x] CORS explícito.
+- [x] Consultas parametrizadas.
+- [x] Base SQLite y esquema idempotente.
+- [x] Leaderboard persistente y TOP 5 por piloto.
+- [x] CSS responsivo implementado.
+- [ ] Revisión visual en escritorio, tablet y móvil.
+- [x] Funciones de hasta 40 líneas verificadas automáticamente.
+- [x] Archivos JS/CSS de hasta 300 líneas verificados automáticamente.
+- [x] Máximo tres niveles de anidación comprobados con ESLint.
+- [x] Bloques compartidos extraídos y revisión de duplicación.
+- [x] Sin console.log de depuración.
+- [x] Reglas numéricas centralizadas en constantes.
+- [x] ESLint y Prettier configurados.
+- [x] Aplicación demostrable localmente y build estático.
+- [ ] Aplicación publicada en URL pública.
+- [x] Contenido de documento técnico de cuatro páginas.
+- [x] PDF técnico de cuatro páginas renderizado y revisado visualmente.
+- [x] Guion de siete minutos y respuestas para ensayar la defensa.
+- [ ] Video de 5–8 minutos grabado.
+- [ ] Ambos integrantes pueden explicar todo el código.
+- [x] Nombres, asignatura, docente, institución y autores completados.
+- [ ] Capturas reales revisadas e incorporadas.
+- [x] Letras, emojis, mezcla y práctica.
+- [x] Cuatro dificultades y progresión por aciertos.
+- [x] Un solo elemento distinto por tablero.
+- [x] Cronómetro, PRISM y victoria/derrota reales.
+- [x] Acierto, error y tiempo agotado con feedback.
+- [x] Vidas, puntos, rachas, precisión, ronda y nivel.
+- [x] Bonus por velocidad y racha; penalizaciones por error, pista y timeout.
+- [x] Máximo de cuadrícula y banner de nivel.
+- [x] Pistas limitadas y práctica sin límites.
+- [x] Práctica excluida de logros y récords en backend.
+- [x] Preguntas independientes, cuatro opciones, reloj y dos oportunidades.
+- [x] Perfil y avatar en menú, partida, resultados y TOP 5.
+- [x] Nueve pantallas o estados separados.
+- [x] Récords de los tres modos y cuatro dificultades.
+- [x] Mejor racha y número de partidas competitivas.
+- [x] Al menos doce logros con icono, nombre, descripción y estado.
+- [x] Cinco temas, sonido, animaciones, confeti y restablecer.
+- [x] Atajos H/P/M y pausa automática.
+- [x] Sin estilos, etiquetas style ni eventos inline en HTML.
+- [x] Archivos/variables técnicos en inglés y documentación española.
+- [x] Reintento de envío y prevención de partidas duplicadas.
+- [x] Pruebas de motor, API e interfaz conectada.
+- [ ] Prueba Chrome ejecutada sin errores.
+- [x] Configuración Netlify/Vercel y Render; instrucciones Railway.
+- [x] No se inventaron historial, commits ni autores.
+- [x] Auditoría con evidencia y límites explícitos.
