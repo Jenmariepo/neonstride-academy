@@ -217,6 +217,7 @@ No se migra automáticamente el `localStorage` antiguo al leaderboard global: im
 ## Documentación y autores
 
 - [Análisis de la versión original](docs/initial-analysis.md).
+- [Documento técnico en Word](docs/technical-document.docx).
 - [Documento técnico PDF de cuatro páginas](docs/technical-document.pdf).
 - [Fuente editable y diagramas Mermaid](docs/technical-document.md).
 - [Guía para cerrar la entrega](docs/delivery-guide.md).
